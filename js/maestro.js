@@ -23,7 +23,7 @@ class Connector{
 		return this.server.serverRequest(requestParams);
 	}
 
-    askForTrainers(data){
+    askForTrainers(){
 		let requestParams = {
 			request: "generateTrainers"
 		};

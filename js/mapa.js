@@ -27,17 +27,18 @@ $(document).ready(function () {
 
             addPokemon();
 
+            GameManager.generateRandomTrainers().then((result2)=>{
+                $("#trainers-list").empty();
+                for(x in GameManager.trainersGroupList){
+                    $("#trainers-list").append('<div id="'+x+'" style="padding: 3px; widht: 20vw" class="alert alert-danger trainer-item" role="alert"><div style="display: inline;"><img style="width: 41px; height: 41px;" src="img/auxSprites/'+GameManager.trainersGroupList[x].length+'trainers.png" alt=""></div><div style="display: inline;">&nbsp;&nbsp; Grupo'+x+' &nbsp;&nbsp;</div><div style="display: inline;"><b>'+GameManager.trainersGroupList[x].length+'&nbsp;</b></div></div>')
+                }
+                addTrainer()
+            });
         });
     	
        
 
 		
-
-/*		$(".trainer-item").click(function (e) {
-			
-			$("#grupo").show();
-		});
-*/
 
 
 
@@ -83,7 +84,7 @@ $(document).ready(function () {
 function addPokemon(){
     $(".pokemon-item").click(function (e) {
         
-        $("#ficha").show();
+        
         var wild = GameManager.wildPokemonList[this.id];
         $("#saude").val(wild.saude);
         $("#velocidade").val(wild.velocidade);
@@ -121,16 +122,43 @@ function addPokemon(){
         $("#habitat").val(hab);
         $("#cc").val(wild.chanceCaptura);
         $("#xp").val(wild.xp);
+        $("#ficha").show();
+    });
+}
+
+function addTrainer(){
+    $(".trainer-item").click(function (e) {
+        $("#grupoList").empty();
+        var group = GameManager.trainersGroupList[this.id];
+        for(let x in group){
+            let pokemonTable = "";
+            console.log(group[x]);
+            for(let y in group[x].listPokemon){
+                pokemonTable = pokemonTable + '<td><table><tr><th rowspan="2"><img src="img/sprites/'+group[x].listPokemon[y].especie.slice(0,3)+'.png" cols></th><th>'+group[x].listPokemon[y].especie+'</th></tr><tr><td>'+group[x].listPokemon[y].nivel+'</td></tr></table></td>'
+            }
+            let div = '<br><table style="width: 95%; text-align: center; background-color: lightcoral; margin:auto;"><tr><th rowspan="2"><img src="img/auxSprites/female-trainer.png"></th><th colspan="6">Nome</th></tr><tr>'+pokemonTable+'</tr></table><br>'
+            $("#grupoList").append(div);
+        }
         
+
+        //let div = '<table style="width: 95%; text-align: center; background-color: lightcoral; margin:auto;"><tr><th rowspan="2"><img src="img/auxSprites/female-trainer.png"></th><th colspan="6">Nome</th></tr><tr>'area dos pokemons'</tr></table>'
+    
+    
+        $("#grupo").show();
     });
 }
 
 
 $(document).ready(function () {
-	$("#close").click(function (e) { 
+	$("#closePoke").click(function (e) { 
 		e.preventDefault();
 		$("#ficha").toggle();
 	});
+    $("#closeTrainer").click(function (e) { 
+		e.preventDefault();
+		$("#grupo").toggle();
+	});
+    
 
 	
 });
