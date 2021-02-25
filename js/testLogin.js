@@ -1,5 +1,3 @@
-$(document).ready(function () {
-    if(!sessionStorage.getItem("login")){
-		$(location).attr('href', 'login.html')
-	}
-});
+if(!sessionStorage.getItem("login")){
+    document.location.replace('login.html');
+}
