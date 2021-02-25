@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="main.css">
+		
+		<style>
+			.login-wrapper{
+				margin: 20rem auto;
+				width: 20rem;
+			}
+		</style>
+	</head>
+	
+	<body>
+
+		  <br><br>
+		  <div class="card">
+				<div class="text-center">
+					<div style="width: 30%; margin: auto;">
+						<form action="index.html" method="POST"  class="form-signin">
+							<br>
+							<img class="mb-4" src="img/439-4391735_pixelmon-logo-png.png" alt="" width="72" height="72">
+							<h1 class="h3 mb-3 font-weight-normal">Faça login</h1>
+							
+							<label for="user" class="sr-only">Usuário</label>
+							<input type="text" id="user" name="user" class="form-control" placeholder="Usuário" required autofocus>
+							
+							<label for="password" class="sr-only">Password</label>
+							<input type="password" id="password" name="password" class="form-control" placeholder="Senha" required><br>
+							<div class="alert alert-danger erro-login" role="alert">
+								Usuário ou senha errados
+							  </div>
+							<button id="entrar" class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+						  <br>
+						</form>
+						  
+					</div>
+			</div>
+		</div>
+		  
+		  <script src="js/jquery-3.2.1.min.js" ></script>
+		  <script src="js/popper.js"></script>
+		  <script src="js/bootstrap.min.js"></script>
+	</body>
+	
+		
+	<script src="js/handleConnection.js"></script>
+    <script src="js/login.js"></script>
+    
+</html>

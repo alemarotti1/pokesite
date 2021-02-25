@@ -1,4 +1,3 @@
-var server = new ServerHandler("service/")
 class ServerHandler{
 	constructor(url){
 		this.destination = url;
@@ -19,4 +18,5 @@ class ServerHandler{
 		});
 	}
 }
+var server = new ServerHandler("service/");
 
