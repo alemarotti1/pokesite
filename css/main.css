@@ -1,0 +1,15 @@
+.erro-login{
+    display: none;
+}
+.login-wrapper{
+    margin: 20rem auto;
+    width: 20rem;
+}
+.local-map{
+    max-width: 30vw;
+    max-height: 35vh;
+    position:fixed;
+    bottom:30px;
+    right:60px;
+    border: 10px solid gray;
+}
