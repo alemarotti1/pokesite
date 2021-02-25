@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+        <script src="js/testLogin.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/main.css">
+		<style>
+			.notification{
+				max-width: 20vw;
+				max-height: 40vh;
+				position:fixed;
+				bottom:30px;
+				left:20px;
+			}
+			#ficha{
+				width: 60vw;
+				height: 85vh;
+				position: fixed;
+				margin: auto;
+				top: 5vh;
+				right: 20vw;
+			}
+			#grupo{
+				width: 60vw;
+				height: 85vh;
+				position: fixed;
+				margin: auto;
+				top: 5vh;
+				right: 20vw;
+			}
+			#pallet{
+				background-image: url("img/Blissey.png");
+			}
+		</style>
+	</head>
+	
+	<body>
+
+		
+
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">Pokesite</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+	  
+			<div class="collapse navbar-collapse" id="navbar">
+				
+			</div>
+		  </nav>
+
+		<div style="width: 100%;" class="mapa text-center">
+			<div style="background-color: gray; " class="rounded">
+				<img src="img/kanto.jpg" usemap="#image-map">
+
+				<map name="image-map">
+					<area class="map-area"  alt="Pallet" 			title="Pallet" href="Pallet" coords="430,708,236,795" shape="rect" id="pallet">
+					<area class="map-area"  alt="Rota1" 			title="Rota1" href="Rota1" coords="424,588,253,702" shape="rect">
+					<area class="map-area"  alt="Viridian_City" 		title="Viridian_City" href="Viridian_City" coords="252,481,440,584" shape="rect">
+					<area class="map-area"  alt="Rota2" 			title="Rota2" href="Rota2" coords="247,474,221,424,300,423,310,387,336,387,337,347,378,346,367,476" shape="poly">
+					<area class="map-area"  alt="Viridian_Forest"	title="Viridian_Forest" href="Viridian_Forest" coords="244,415,295,417,309,379,329,380,334,337,299,318,227,329" shape="poly">
+					<area class="map-area"  alt="Pewter" 			title="Pewter" href="Pewter" coords="339,315,373,316,377,339,339,342,337,330,289,308,284,271,302,264,294,177,395,177,390,266,322,266,321,292" shape="poly">
+					<area class="map-area"  alt="Diglet_Cave_Pewter" title="Diglet_Cave_Pewter" href="Diglet_Cave_Pewter" coords="405,271,332,307" shape="rect">
+					<area class="map-area"  alt="Rota3" 			title="Rota3" href="Rota3" coords="582,269,584,287,467,289,469,268,397,266,398,226,486,223,504,251,536,269" shape="poly">
+					<area class="map-area"  alt="Mt_Moon" 			title="Mt_Moon" href="Mt_Moon" coords="534,203,632,264" shape="rect">
+					<area class="map-area"  alt="Rota4" 			title="Rota4" href="Rota4" coords="634,274,767,241" shape="rect">
+					<area class="map-area"  alt="Cerulean" 			title="Cerulean" href="Cerulean" coords="891,346,779,263" shape="rect">
+					<area class="map-area"  alt="Rota5" 			title="Rota5" href="Rota5" coords="899,348,796,417" shape="rect">
+					<area class="map-area"  alt="Saffron" 			title="Saffron" href="Saffron" coords="896,532,782,424" shape="rect">
+					<area class="map-area"  alt="Rota6" 			title="Rota6" href="Rota6" coords="894,595,787,538" shape="rect">
+					<area class="map-area"  alt="Vermillion" 		title="Vermillion" href="Vermillion" coords="788,603,885,729" shape="rect">
+					<area class="map-area"  alt="Rota7" 			title="Rota7" href="Rota7" coords="779,468,727,535" shape="rect">
+					<area class="map-area"  alt="Celadon" 			title="Celadon" href="Celadon" coords="604,561,718,459" shape="rect">
+					<area class="map-area"  alt="Rota8" 			title="Rota8" href="Rota8" coords="899,482,1031,551" shape="rect">
+					<area class="map-area"  alt="Lavender" 			title="Lavender" href="Lavender" coords="1033,541,1198,463" shape="rect">
+					<area class="map-area"  alt="Rock_Tunnel" 		title="Rock_Tunnel" href="Rock_Tunnel" coords="1083,456,1022,457,1026,474,916,478,942,425,912,353,1055,351,1055,371,1086,372,1079,381,1039,382,1041,411,1081,411,1084,429" shape="poly">
+					<area class="map-area"  alt="Power_Plant" 		title="Power_Plant" href="Power_Plant" coords="1113,385,1043,409" shape="rect">
+					<area class="map-area"  alt="Rota9" 			title="Rota9" href="Rota9" coords="905,274,1051,347" shape="rect">
+					<area class="map-area"  alt="Rota10" 			title="Rota10" href="Rota10" coords="1145,315,1056,370" shape="rect">
+					<area class="map-area"  alt="Rota11" 			title="Rota11" href="Rota11" coords="887,629,1015,666" shape="rect">
+					<area class="map-area"  alt="Diglet_Cave_Vermilion" title="Diglet_Cave_Vermilion" href="Diglet_Cave_Vermilion" coords="973,586,897,627" shape="rect">
+					<area class="map-area"  alt="Rota12" 			title="Rota12" href="Rota12" coords="1142,545,1048,786" shape="rect">
+					<area class="map-area"  alt="Rota13" 			title="Rota13" href="Rota13" coords="892,738,1045,789" shape="rect">
+					<area class="map-area"  alt="Rota14" 			title="Rota14" href="Rota14" coords="904,895,974,792" shape="rect">
+					<area class="map-area"  alt="Rota15" 			title="Rota15" href="Rota15" coords="782,849,901,896" shape="rect">
+					<area class="map-area"  alt="Rota16" 			title="Rota16" href="Rota16" coords="456,599,599,528" shape="rect">
+					<area class="map-area"  alt="Rota17" 			title="Rota17" href="Rota17" coords="472,868,556,603" shape="rect">
+					<area class="map-area"  alt="Rota18" 			title="Rota18" href="Rota18" coords="483,927,584,875" shape="rect">
+					<area class="map-area"  alt="Fucshia" 			title="Fucshia" href="Fucshia" coords="590,918,707,818" shape="rect">
+					<area class="map-area"  alt="Rota19" 			title="Rota19" href="Rota19" coords="712,919,614,1035" shape="rect">
+					<area class="map-area"  alt="Rota20" 			title="Rota20" href="Rota20" coords="611,971,363,1054" shape="rect">
+					<area class="map-area"  alt="Cinnabar" 			title="Cinnabar" href="Cinnabar" coords="360,968,223,1042" shape="rect">
+					<area class="map-area"  alt="Rota21" 			title="Rota21" href="Rota21" coords="394,959,280,804" shape="rect">
+					<area class="map-area"  alt="Rota22" 			title="Rota22" href="Rota22" coords="249,613,117,532" shape="rect">
+					<area class="map-area"  alt="Rota23" 			title="Rota23" href="Rota23" coords="117,483,30,364" shape="rect">
+					<area class="map-area"  alt="Rota24" 			title="Rota24" href="Rota24" coords="847,251,954,153" shape="rect">
+					<area class="map-area"  alt="Rota25" 			title="Rota25" href="Rota25" coords="834,89,1074,148" shape="rect">
+					<area class="map-area"  alt="Rota26" 			title="Rota26" href="Rota26" coords="113,814,32,633" shape="rect">
+					<area class="map-area"  alt="League_Reception_Gate" title="League_Reception_Gate" href="League_Reception_Gate" coords="" shape="rect">
+					<area class="map-area"  alt="Victory_Road" 		title="Victory_Road" href="Victory_Road" coords="13,496,114,625" shape="rect">
+				</map>
+			</div>
+		</div>
+		
+		<img class="local-map" id="img-map" src=""/>
+		
+		
+		<div class="notification">
+
+			<div id="trainers-list-container" style="padding: 1px 5px 10px 5px;" class="alert alert-dark text-center collapse" role="alert">
+				<div style="float: right;" ><img id="close-pokemon-list" class="toggle1" style="width: 20px;" src="img/close.png" alt="Close"></div><br>
+				<div id="trainers-list" style="max-height: 18vh; width: 100%; padding-left: 3px; padding-right: 3px; overflow-y: scroll; "  role="alert">
+					Nenhum treinador gerado. Selecione um mapa, por favor. 
+				</div>
+			</div>
+			<div id="toggle-trainer" style="width: 5vw; height: 4.5vw; padding: 0px;" class="toggle1 alert alert-dark text-center collapse.show" role="alert">
+				<img style="width: 4vw; margin: 1px;" src="img/trainer.png" alt="">
+			</div>
+
+
+
+
+			<div id="pokemon-list-container" class="alert alert-dark text-center collapse" style="padding: 1px 5px 10px 5px;">
+				<div style="float: right;" ><img id="close-pokemon-list" class="toggle2" style="width: 20px;" src="img/close.png" alt="Close"></div><br>
+				<div id="pokemons-list" style="max-height: 18vh; width: 100%; padding-left: 3px; padding-right: 3px; overflow-y: scroll; "  role="alert">
+					Nenhum pokemon gerado. Selecione um mapa, por favor.
+				</div>
+			</div>
+
+			<div id="toggle-pokemon" style="width: 5vw; height: 4.5vw; padding: 0px;" class="toggle2 alert alert-dark text-center collapse.show" role="alert">
+				<img style="width: 4vw; margin: 1px;" src="img/happiny.png" alt="pokemons">
+			</div>
+			
+		</div>
+
+		<div id="ficha" style="overflow-y: scroll;" class="collapse">
+			<div style=" width: 100%; background-color: #E0E0E0; border: 1px solid black; ">
+				<div style="float: right;" ><img id="close" style="width: 30px;" src="img/close.png" alt="Close"></div><br>
+				<div style="width: 100%; text-align: center;"><h3 style="font-weight: bolder;">Geral</h3></div>
+				<label for="especie" style="width: 9%;">Espécie: </label>
+				<input style="width: 90%;" placeholder="Pokemon" disabled type="text" id="especie"/>
+				
+				
+				
+				<label for="nivel" style="width: 9%;">Nível: </label>
+				<input style="width: 9%;" placeholder="00" disabled type="text" id="nivel"/>
+				
+				<label for="Sexo" style="width: 9%;">Sexo: </label>
+				<input style="width: 19%;" placeholder="------" disabled type="text" id="sexo"/>
+				
+				<label for="nature" style="width: 9%;">Nature: </label>
+				<input style="width: 42%;" placeholder="Nature" disabled type="text" id="nature"/>
+				
+				<label for="nature" style="width: 9%;">Habilidade: </label>
+				<input style="width: 42%;" placeholder="Habilidade" disabled type="text" id="habilidade"/>
+				<label for="cc">Chance Captura: </label>
+				<input style="width: 9%;" placeholder="00" disabled type="text" id="cc"/>
+				<label for="xp">XP: </label>
+				<input style="width: 9%;" placeholder="00" disabled type="text" id="xp"/>
+				<br>
+				
+				
+				<label for="habitat" style="width: 9%;">Habitat: </label>
+				<input style="width: 42%;" placeholder="habitat" disabled type="text" id="habitat"/>
+				
+				
+				<br><br>
+				
+				<div style="width: 100%; text-align: center;"><h3 style="font-weight: bolder;">Atributos</h3></div>
+				<br>
+				<label for="saude" style="width: 8%;">Saude: </label>
+				<input style="width: 39%;" placeholder="00" disabled type="text" id="saude"/>
+				
+				<label for="velocidade" style="width: 12%;">Velocidade: </label>
+				<input style="width: 39%;" placeholder="Nature" disabled type="text" id="velocidade"/>
+				<br>
+				
+				
+				<label for="ataque" style="width: 8%;">ATQ: </label>
+				<input style="width: 39%;" placeholder="00" disabled type="text" id="ataque"/>
+				
+				<label for="defesa" style="width: 12%;">DEF: </label>
+				<input style="width: 39%;" placeholder="Nature" disabled type="text" id="defesa"/>
+				<br>
+				
+				
+				<label for="spataque" style="width: 8%;">SP ATQ: </label>
+				<input style="width: 39%;" placeholder="00" disabled type="text" id="spataque"/>
+				
+				<label for="spdefesa" style="width: 12%;">SP DEF: </label>
+				<input style="width: 39%;" placeholder="Nature" disabled type="text" id="spdefesa"/>
+				<br><br>
+				
+				
+				<div style="width: 100%; text-align: center;"><h3 style="font-weight: bolder;">Golpes</h3></div>
+				<br>
+				<div id="golpes">
+				<table  class="table-striped" style="width: 24%; background-color: #CCCCCC; border: 2px solid black; display: inline-table;">
+					<tr style="text-align: center">
+						<th colspan="2" style="text-align: center" id="nome">Arranhão</th>
+					</tr>
+					<tr>
+						<td>1d12+6</td>
+						<td>A vontade</td>
+					</tr>
+					<tr>
+						<td colspan="2">d</td>
+					</tr>
+					<tr>
+						<td colspan="2">e</td>
+					</tr>
+				</table> 
+				</div>
+				
+				
+				<br><br>
+				
+			</div>
+		</div>
+
+		<div id="grupo" style="overflow-y: scroll; overflow-x: hidden;" class="collapse">
+			<div style=" width: 100%; background-color: #E0E0E0; border: 1px solid black; min-height: 100%; ">
+				<div style="float: right;" ><img id="close" style="width: 30px;" src="img/close.png" alt="Close"></div><br>
+				<table style="width: 95%; text-align: center; background-color: lightcoral; margin:auto;">
+					<tr>
+						<th rowspan="2">
+							<img src="img/auxSprites/female-trainer.png">
+						</th>
+						<th colspan="6">
+							Nome
+						</th>
+					</tr>
+					
+					<tr>
+						<td><table>
+							<tr><th rowspan="2"><img src="img/sprites/001.png" cols></th><th>Especie</th></tr>
+							<tr><td>nivel</td></tr>
+						</table></td> 
+						<td><table>
+							<tr><th rowspan="2"><img src="img/sprites/001.png" cols></th><th>Especie</th></tr>
+							<tr><td>nivel</td></tr>
+						</table></td> 
+						<td><table>
+							<tr><th rowspan="2"><img src="img/sprites/001.png" cols></th><th>Especie</th></tr>
+							<tr><td>nivel</td></tr>
+						</table></td> 
+						<td><table>
+							<tr><th rowspan="2"><img src="img/sprites/001.png" cols></th><th>Especie</th></tr>
+							<tr><td>nivel</td></tr>
+						</table></td> 
+						<td><table>
+							<tr><th rowspan="2"><img src="img/sprites/001.png" cols></th><th>Especie</th></tr>
+							<tr><td>nivel</td></tr>
+						</table></td> 
+						<td><table>
+							<tr><th rowspan="2"><img src="img/sprites/001.png" cols></th><th>Especie</th></tr>
+							<tr><td>nivel</td></tr>
+						</table></td> 
+						
+					</tr>
+
+				</table>
+				
+				
+				<br><br>
+				
+			</div>
+		</div>
+
+
+		  <script src="js/jquery-3.2.1.min.js" ></script>
+		  <script src="js/popper.js"></script>
+		  <script src="js/bootstrap.min.js"></script>
+	</body>
+	
+		
+	
+	<script src="js/handleConnection.js"></script>
+    <script src="js/maestro.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/mapa.js"></script>
+
+</html>
