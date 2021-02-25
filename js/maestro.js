@@ -14,9 +14,28 @@ class Connector{
 	}
 
 
-    
+    askForWildPokemon(data){
+		let requestParams = {
+			request: "generateWild",
+            ambientList: data
+		};
+
+		return this.server.serverRequest(requestParams);
+	}
+
+    askForTrainers(data){
+		let requestParams = {
+			request: "generateTrainers"
+		};
+
+		return this.server.serverRequest(requestParams);
+	}
+
+
+
 }
 $(document).ready(function () { 
-    var maestro = new Connector();
+    let maestro = null;
+    maestro = new Connector();
 	maestro.getNavbar(sessionStorage.getItem("login"));
 });
