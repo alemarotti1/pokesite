@@ -26,7 +26,7 @@ class GameManager{
                 for(let x in temp){
                     let group = [];
                     for(let y in temp[x]){  
-                        group.push(new Trainer(temp[x][y].listPokemon));
+                        group.push(new Trainer(temp[x][y].listPokemon, temp[x][y].nome, temp[x][y].sexo));
                     }
                     GameManager.trainersGroupList.push(group);
                 }
@@ -90,7 +90,7 @@ class Pokemon{
 
 
   class Trainer{
-	constructor(listPokemon, sexo, nome){
+	constructor(listPokemon, nome, sexo){
 		this.listPokemon = [];
         this.sexo = sexo;
         this.nome = nome;

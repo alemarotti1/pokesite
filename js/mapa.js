@@ -136,7 +136,18 @@ function addTrainer(){
             for(let y in group[x].listPokemon){
                 pokemonTable = pokemonTable + '<td><table><tr><th rowspan="2"><img src="img/sprites/'+group[x].listPokemon[y].especie.slice(0,3)+'.png" cols></th><th>'+group[x].listPokemon[y].especie+'</th></tr><tr><td>'+group[x].listPokemon[y].nivel+'</td></tr></table></td>'
             }
-            let div = '<br><table style="width: 95%; text-align: center; background-color: lightcoral; margin:auto;"><tr><th rowspan="2"><img src="img/auxSprites/female-trainer.png"></th><th colspan="6">Nome</th></tr><tr>'+pokemonTable+'</tr></table><br>'
+            let image = ""
+            let color = "black"
+            if (group[x].sexo==="Masculino"){
+                image = "male-trainer.png"
+                color = "dodgerblue";
+            } 
+            else{
+                image = "female-trainer.png"
+                color = "lightcoral";
+            }
+            
+            let div = '<br><table style="width: 95%; text-align: center; background-color: '+color+'; margin:auto;"><tr><th rowspan="2"><img src="img/auxSprites/'+image+'"></th><th colspan="6">'+group[x].nome+'</th></tr><tr>'+pokemonTable+'</tr></table><br>'
             $("#grupoList").append(div);
         }
         
