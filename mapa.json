@@ -21,7 +21,7 @@
 { "city":"Rota8", "ambient": ["Florestas", "Montanhas", "Pradarias"]},
 { "city":"Rota9", "ambient": ["Montanhas", "Pradarias"]},
 { "city":"Rota10", "ambient": ["Águas Doces", "Cidades", "Montanhas", "Pradarias"]},
-{ "city":"Rota11", "ambient": ["Cavernas, Florestas", "Pradarias"]},
+{ "city":"Rota11", "ambient": ["Cavernas", "Florestas", "Pradarias"]},
 { "city":"Rota12", "ambient": ["Florestas", "Oceanos", "Pradarias"]},
 { "city":"Rota13", "ambient": ["Florestas", "Oceanos", "Pradarias"]},
 { "city":"Rota14", "ambient": ["Águas Doces", "Pradarias"]},
