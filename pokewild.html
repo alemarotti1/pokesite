@@ -1,0 +1,401 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+
+		
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	</head>
+	
+	<body style="background-color: #FFEEEE; border: 0px; margin: 0px;">
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">Pokesite</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+	  
+			<div class="collapse navbar-collapse" id="navbarsExample04">
+			  <ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+				  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="mapa.html">Mapa</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="pokewild.html">Pokemon Específico</a>
+				  </li>
+				<li class="nav-item">
+				  <a class="nav-link" href="#">Gerenciar Personagens</a>
+				</li>
+			  </ul>
+			  <form class="form-inline my-2 my-md-0">
+				<input class="form-control" type="text" placeholder="Search">
+			  </form>
+			</div>
+		  </nav>
+
+		<div style="width: 90%; margin: auto">
+			<div style="display: inline; float: left;  width: 32%;" id="left">
+				<div style="height: 33vh;"></div>
+				<div style=" width: 100%; height: 30vh;">
+					<input style="width: 79%;" placeholder="Pokemon" type="text" id="search"/><button id="buscar" style="width: 19%;" type="button" >Buscar!</button>
+					<br>
+					<select style="width: 98%;" id="search-results" size="10">
+						
+					</select>
+					<input type="number" value="0" style="width: 79%;" id="nv" /> <button id="gerar-wild" style="width: 19%;" type="button" >Gerar!</button> 
+				</div>
+				<div style="height: 33vh;"></div>
+			
+			
+			</div>
+			<div style=" width: 65%;display: inline; float: right;" id="right">
+				<div style="height: 5vh;"></div>
+				<div style=" width: 100%; background-color: #E0E0E0; border: 1px solid black;">
+					<div style="width: 100%; text-align: center;"><h3 style="font-weight: bolder;">Geral</h3></div>
+					<label for="especie" style="width: 9%;">Espécie: </label>
+					<input style="width: 90%;" placeholder="Pokemon" disabled type="text" id="especie"/>
+					
+					
+					
+					<label for="nivel" style="width: 9%;">Nível: </label>
+					<input style="width: 9%;" placeholder="00" disabled type="text" id="nivel"/>
+					
+					<label for="Sexo" style="width: 9%;">Sexo: </label>
+					<input style="width: 19%;" placeholder="------" disabled type="text" id="sexo"/>
+					
+					<label for="nature" style="width: 9%;">Nature: </label>
+					<input style="width: 42%;" placeholder="Nature" disabled type="text" id="nature"/>
+					
+					<label for="nature" style="width: 9%;">Habilidade: </label>
+					<input style="width: 42%;" placeholder="Habilidade" disabled type="text" id="habilidade"/>
+					<label for="cc">Chance Captura: </label>
+					<input style="width: 9%;" placeholder="00" disabled type="text" id="cc"/>
+					<label for="xp">XP: </label>
+					<input style="width: 9%;" placeholder="00" disabled type="text" id="xp"/>
+					<br>
+					
+					
+					<label for="habitat" style="width: 9%;">Habitat: </label>
+					<input style="width: 42%;" placeholder="habitat" disabled type="text" id="habitat"/>
+					
+					
+					<br><br>
+					
+					<div style="width: 100%; text-align: center;"><h3 style="font-weight: bolder;">Atributos</h3></div>
+					<br>
+					<label for="saude" style="width: 8%;">Saude: </label>
+					<input style="width: 39%;" placeholder="00" disabled type="text" id="saude"/>
+					
+					<label for="velocidade" style="width: 12%;">Velocidade: </label>
+					<input style="width: 39%;" placeholder="Nature" disabled type="text" id="velocidade"/>
+					<br>
+					
+					
+					<label for="ataque" style="width: 8%;">ATQ: </label>
+					<input style="width: 39%;" placeholder="00" disabled type="text" id="ataque"/>
+					
+					<label for="defesa" style="width: 12%;">DEF: </label>
+					<input style="width: 39%;" placeholder="Nature" disabled type="text" id="defesa"/>
+					<br>
+					
+					
+					<label for="spataque" style="width: 8%;">SP ATQ: </label>
+					<input style="width: 39%;" placeholder="00" disabled type="text" id="spataque"/>
+					
+					<label for="spdefesa" style="width: 12%;">SP DEF: </label>
+					<input style="width: 39%;" placeholder="Nature" disabled type="text" id="spdefesa"/>
+					<br><br>
+					
+					
+					<div style="width: 100%; text-align: center;"><h3 style="font-weight: bolder;">Golpes</h3></div>
+					<br>
+					<div id="golpes">
+					<table  class="table-striped" style="width: 24%; background-color: #CCCCCC; border: 2px solid black; display: inline-table;">
+						<tr style="text-align: center">
+							<th colspan="2" style="text-align: center" id="nome">Arranhão</th>
+						</tr>
+						<tr>
+							<td>1d12+6</td>
+							<td>A vontade</td>
+						</tr>
+						<tr>
+							<td colspan="2">d</td>
+						</tr>
+						<tr>
+							<td colspan="2">e</td>
+						</tr>
+					</table> 
+					</div>
+					
+					
+					<br><br>
+					
+				</div>
+				<!--div style="height: 5vh;"></div-->
+			</div>
+		
+		</div>
+		
+		
+		
+	</body>
+	
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+		
+	<script>
+	class Pokemon {
+  constructor(poke, nivel) {
+	  console.log(poke);
+		this.especie = poke[0];
+		if(~~(Math.random() * 10)%2)this.sexo = "Masculino";
+		else this.sexo = "Feminino";
+		
+		this.chanceCaptura = poke[4];
+		this.xp = poke[5];
+		this.habitat = poke[6];
+		
+		switch(~~(Math.random() * 35)){
+			case 0: this.nature = "Ousada"; 	 this.natureStat = [2,0,-2,0,0,0]; break;
+			case 1: this.nature = "Dócil";  	 this.natureStat = [2,0,0,-2,0,0]; break;
+			case 2: this.nature = "Orgulhosa";   this.natureStat = [2,0,0,0,-2,0]; break;
+			case 3: this.nature = "Excentrica";  this.natureStat = [2,0,0,0,0,-2]; break;
+			case 4: this.nature = "Preguiçosa";  this.natureStat = [2,-2,0,0,0,0]; break;
+			case 5: this.nature = "Desesperada"; this.natureStat = [-2,0,2,0,0,0]; break;
+			case 6: this.nature = "Solitária";   this.natureStat = [0,0,2,-2,0,0]; break;
+			case 7: this.nature = "Firme"; 	 	 this.natureStat = [0,0,2,0,-2,0]; break;
+			case 8: this.nature = "Travessa";    this.natureStat = [0,0,2,0,0,-2]; break;
+			case 9: this.nature = "Brava";		 this.natureStat = [0,-2,2,0,0,0]; break;
+			case 10: this.nature = "Rígida"; 	 this.natureStat = [-2,0,0,2,0,0]; break;
+			case 11: this.nature = "Arrojada";	 this.natureStat = [0,0,-2,2,0,0]; break;
+			case 12: this.nature = "Endiabrada"; this.natureStat = [0,0,0,2,-2,0]; break;
+			case 13: this.nature = "Negligente"; this.natureStat = [0,0,0,2,0,-2]; break;
+			case 14: this.nature = "Relaxada"; 	 this.natureStat = [0,-2,0,2,0,0]; break;
+			case 15: this.nature = "Timida"; 	 this.natureStat = [-2,0,0,0,2,0]; break;
+			case 16: this.nature = "Modesta";	 this.natureStat = [0,0,-2,0,2,0]; break;
+			case 17: this.nature = "Amável";	 this.natureStat = [0,0,0,-2,2,0]; break;
+			case 18: this.nature = "Imprudente"; this.natureStat = [0,0,0,0,2,-2]; break;
+			case 19: this.nature = "Quieta"; 	 this.natureStat = [0,-2,0,0,2,0]; break;
+			case 20: this.nature = "Enjoada"; 	 this.natureStat = [-2,0,0,0,0,2]; break;
+			case 21: this.nature = "Calma";		 this.natureStat = [0,0,-2,0,0,2]; break;
+			case 22: this.nature = "Gentil";	 this.natureStat = [0,0,0,-2,0,2]; break;
+			case 23: this.nature = "Meticulosa"; this.natureStat = [0,0,0,0,-2,2]; break;
+			case 24: this.nature = "Atrevida";	 this.natureStat = [0,-2,0,0,0,2]; break;
+			case 25: this.nature = "Séria";		 this.natureStat = [-2,2,0,0,0,0]; break;
+			case 26: this.nature = "Medrosa";	 this.natureStat = [0,2,-2,0,0,0]; break;
+			case 27: this.nature = "Apressada";	 this.natureStat = [0,2,0,-2,0,0]; break;
+			case 28: this.nature = "Alegre";	 this.natureStat = [0,2,0,0,-2,0]; break;
+			case 29: this.nature = "Ingênua";	 this.natureStat = [0,2,0,0,0,-2]; break;
+			case 30: this.nature = "Comedida";	 this.natureStat = [0,0,0,0,0,0]; break;
+			case 31: this.nature = "Chata";		 this.natureStat = [0,0,0,0,0,0]; break;
+			case 32: this.nature = "Paciente";	 this.natureStat = [0,0,0,0,0,0]; break;
+			case 33: this.nature = "Sensata";	 this.natureStat = [0,0,0,0,0,0]; break;
+			case 34: this.nature = "Exótica";	 this.natureStat = [0,0,0,0,0,0]; break;
+		}
+		
+	  
+		this.nivel = parseInt(nivel);
+		
+		this.saudeBasal = parseInt(poke[1][0])+this.natureStat[0];
+		this.saude = this.saudeBasal;
+		
+		
+		
+		this.ataqueBasal = parseInt(poke[1][1])+this.natureStat[2];
+		this.ataque = this.ataqueBasal;
+		
+		this.defesaBasal = parseInt(poke[1][2])+this.natureStat[3];
+		this.defesa = this.defesaBasal;
+		
+		this.spAtaqueBasal = parseInt(poke[1][3])+this.natureStat[4];
+		this.spAtaque = this.spAtaqueBasal;
+		
+		this.spDefesaBasal = parseInt(poke[1][4])+this.natureStat[5];
+		this.spDefesa = this.spDefesaBasal;
+		
+		this.velocidadeBasal = parseInt(poke[1][5])+this.natureStat[1];
+		this.velocidade = this.velocidadeBasal;
+		
+		
+		this.habilidades = poke[2];
+		this.habilidadeReal = this.habilidades[(~~(Math.random() * 100)%this.habilidades.length)];
+		
+		
+		this.golpesAprendiveis = poke[3];
+		this.golpes = [];
+		
+		for(var i=this.golpesAprendiveis.length-1; i>=0; i--){
+			try{
+				if(typeof(this.golpesAprendiveis[i][0])==="number"){
+					if((this.nivel>=this.golpesAprendiveis[i][0])&&(this.golpes.length<8)){
+						this.golpes.push(this.golpesAprendiveis[i][1]);
+					}
+					
+				}else{
+					if((this.golpesAprendiveis[i][0].includes("Evol"))&&(this.golpes.length<8)){
+						this.golpes.push(this.golpesAprendiveis[i][1]);
+					}
+				}
+			}catch(err){
+				console.log(err);
+			}
+			
+		}
+		
+		this.distribuirPontos();
+	}
+	distribuirPontos(){
+		var pontos = this.nivel-1;
+		
+		var ordem = [[0, this.saude],[1, this.velocidade],[2, this.ataque],[3, this.defesa],[4, this.spAtaque],[5, this.spDefesa]];
+		var ordem2 = [[0, this.saude],[1, this.velocidade],[2, this.ataque],[3, this.defesa],[4, this.spAtaque],[5, this.spDefesa]];
+		ordem = this.quicksort(ordem);
+		var distribution = [0,0,0,0,0,0];
+		
+		while(pontos>0){
+			//console.log(pontos)
+			var att = ~~(Math.random() * 6);
+			//var att2 = ~~(Math.random() * 6);
+			//att = att<att2 ? att : att2;
+			
+			if(att!=0){
+				if((ordem[att][1]+distribution[ordem[att][0]])<(ordem[att-1][1]+distribution[ordem[att-1][0]])){
+					distribution[ordem[att][0]]=distribution[ordem[att][0]]+1;
+					pontos--;
+				}
+			}else{
+				distribution[ordem[0][0]]=distribution[ordem[0][0]]+1;
+				pontos--;
+			}
+		}
+		this.saude 		= this.saude 		+ distribution[0];
+		this.velocidade = this.velocidade 	+ distribution[1];
+		this.ataque 	= this.ataque 		+ distribution[2];
+		this.defesa 	= this.defesa 		+ distribution[3];
+		this.spAtaque	= this.spAtaque 	+ distribution[4];
+		this.spDefesa	= this.spDefesa 	+ distribution[5];
+		
+		
+		
+	/**/	
+	}
+	
+	quicksort(atr){
+		var pivot = [];
+		var before =[];
+		var after = [];
+		if(atr.length<=1){
+			return atr;
+		}else{
+			pivot = (atr[0]);
+			for(var i=1; i<atr.length; i++){
+				if(atr[i][1]>pivot[1]){before.push(atr[i])}
+				else{after.push(atr[i]);}
+			}
+		}
+		
+		return ([]).concat(this.quicksort(before), [pivot], this.quicksort(after));
+		
+	}
+	
+	
+	
+	
+} 
+
+var wild = null;
+$(document).ready(function(){
+	var pokedex = [];
+	
+	
+        $.getJSON("jsonDump2.json", function(data){
+			pokedex = data;
+			console.log(pokedex);
+        }).fail(function(){
+            console.log("An error has occurred.");
+        });
+		
+		
+		
+		$("#buscar").click(function(){
+			var term = $("#search").val().toUpperCase();
+			$("#search-results").empty();
+			for(x in pokedex){
+				if((pokedex[x][0]).toUpperCase().includes(term)){
+					var pokename = pokedex[x][0]
+					$("#search-results").append('<option id="'+pokename.substring(0, 3)+'" value="'+pokename.substring(0, 3)+'">'+pokename+'</option>');
+				}
+			}
+		})
+		
+		$("#gerar-wild").click(function(){
+			var term = $("#search-results").val().toUpperCase();
+			
+			var lvl = $("#nv").val();
+			wild = criarWild(term, lvl);
+			
+			$("#saude").val(wild.saude);
+			$("#velocidade").val(wild.velocidade);
+			$("#ataque").val(wild.ataque);
+			$("#defesa").val(wild.defesa);
+			$("#spataque").val(wild.spAtaque);
+			$("#spdefesa").val(wild.spDefesa);
+			
+			$("#especie").val(wild.especie);
+			$("#nivel").val(wild.nivel);
+			$("#sexo").val(wild.sexo);
+			
+			var addNature = "+"+("HP".repeat(wild.natureStat[0]-1<0? 0: wild.natureStat[0]-1))+("SPD".repeat(wild.natureStat[1]-1<0? 0: wild.natureStat[1]-1))+("ATQ".repeat(wild.natureStat[2]-1<0? 0: wild.natureStat[2]-1))+("DEF".repeat(wild.natureStat[3]-1<0? 0: wild.natureStat[3]-1))+("SP.ATQ".repeat(wild.natureStat[4]-1<0? 0: wild.natureStat[4]-1))+("SP.DEF".repeat(wild.natureStat[5]-1<0? 0: wild.natureStat[5]-1));
+			var subNature = "-"+("HP".repeat(-wild.natureStat[0]-1<0? 0: -wild.natureStat[0]-1))+("SPD".repeat(-wild.natureStat[1]-1<0? 0: -wild.natureStat[1]-1))+("ATQ".repeat(-wild.natureStat[2]-1<0? 0: -wild.natureStat[2]-1))+("DEF".repeat(-wild.natureStat[3]-1<0? 0: -wild.natureStat[3]-1))+("SP.ATQ".repeat(-wild.natureStat[4]-1<0? 0: -wild.natureStat[4]-1))+("SP.DEF".repeat(-wild.natureStat[5]-1<0? 0: -wild.natureStat[5]-1));
+			
+			$("#nature").val(wild.nature+addNature+subNature);
+			
+			
+			
+			
+			$("#golpes").empty();
+			//var nomeGolpe, qtddado,dado,danoBase, frequencia;
+			for(x in wild.golpes){
+				var nomeGolpe = wild.golpes[x];//, qtddado,dado,danoBase, frequencia;
+				var table = "<table class='able-striped' style='width: 24%; background-color: #CCCCCC; border: 2px solid black; display: inline-table;'> <tr style='text-align: center; background-color: #f9f9f9'> <th colspan='2' style='text-align: center' id='nome'>"+nomeGolpe+"</th> </tr> <tr> <td>1d12+6</td> <td>A vontade</td> </tr> <tr style='background-color: #f9f9f9'> <td colspan='2'>d</td> </tr> <tr> <td colspan='2'>e</td> </tr> </table> ";
+				$("#golpes").append(table);
+			}
+			
+			$("#habilidade").val(wild.habilidadeReal);
+			
+			var hab = "";
+			for(x in wild.habitat){
+				hab = hab + wild.habitat[x]
+			}
+			$("#habitat").val(hab);
+			$("#cc").val(wild.chanceCaptura);
+			$("#xp").val(wild.xp);
+			
+			
+			
+			
+			
+			
+		})
+		
+		function criarWild(especie, nivel){
+			var pokeResult;
+
+			pokeResult = pokedex[parseInt(especie)-1];
+			return new Pokemon(pokeResult, nivel);
+			
+		}
+
+		
+		
+		
+
+
+
+
+});
+	</script>
+</html>
