@@ -1,3 +1,15 @@
 
 #ignoring images
 *.png
+
+#node
+node_modules
+build
+resources
+app.js
+package.json
+package-lock.json
+proxyconfig.json
+npm-debug.log
+.env
+.DS_Store
